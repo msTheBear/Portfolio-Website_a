@@ -1,0 +1,657 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: "Cantarell" !important;
+  margin: 0;
+}
+
+.preloaderWrapper {
+  z-index: 99999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 2s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* NAVBAR START */
+
+.navbar {
+  width: 0;
+}
+
+.msthebearLogo {
+  z-index: 999;
+  position: fixed;
+  height: 12.5% !important;
+  transition: all linear .25s;
+  margin-left: 1.5%;
+  margin-top: 1%;
+  transition: all .25s ease-in-out;
+}
+
+.navLogoScroll {
+  height: 10% !important;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.nav-item .nav-link {
+  color: white !important;
+}
+
+.nav-item a {
+  font-size: 1.5vh !important;
+}
+
+.nav-item a:hover {
+  color: #a8744cff !important;
+}
+
+.toggleMenuButton {
+  color: white;
+  width: 50px !important;
+  height: 50px !important;
+  z-index: 9999;
+  background-color: transparent;
+  position: fixed;
+  border: none;
+  top: 1%;
+  right: 1%;
+  transition: all .25s ease-in-out;
+  filter: drop-shadow(0 0 1px black);
+}
+
+/* NAVBAR END */
+
+
+/* MENU OVERLAY START */
+
+.modal-content {
+  background-color: transparent !important;
+}
+
+.modal-content,
+.modal-header,
+.modal-footer {
+  border: none !important;
+}
+
+.modal-backdrop {
+  background-color: black !important;
+  opacity: 0.9 !important;
+}
+
+.modal-body {
+  padding: 0 !important;
+}
+
+.modal-dialog {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.centerAlign {
+  text-align: center;
+}
+
+#msthebearLogoOverlay {
+  width: 35%;
+  transition: all .25s ease-in-out !important;
+}
+
+
+
+.buttonCloseMenu {
+  margin: 0 auto !important;
+  background-color: white !important;
+  width: 10%;
+  height: 10%;
+  transition: all .25s ease-in-out !important;
+}
+
+.bi-x-lg {
+  color: black !important;
+}
+
+.nav-item .nav-link {
+  font-size: 2rem !important;
+  margin: 0 auto !important;
+  width: 50%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+/* MENU OVERLAY END*/
+
+
+/* SECTION VIDEO START */
+
+.backgroundVideoImg {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#videoBackground {
+  position: relative;
+}
+
+#videoOnTv {
+  width: 47.3%;
+  margin-top: -47.8%;
+  left: 26.25%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 1.25% 1.25% 0 0;
+}
+
+#scrollContainer {
+  position: absolute !important;
+}
+
+#scrollIcon {
+  width: 2%;
+  margin-top: 46%;
+  position: absolute;
+  left: 50%;
+}
+
+.floatingScroll {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 15px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+/* SECTION VIDEO END */
+
+
+/* SECTION ABOUT ME START */
+
+#aboutMe {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.aboutMeTextContainer {
+  width: 70% !important;
+}
+
+.aboutMeText {
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-size: 2vh;
+  color: grey;
+}
+
+.myName {
+  font-size: 4vh;
+}
+
+#textImMichal {
+  font-size: 4vh;
+  color: #6498b3ff;
+}
+
+#justifyText {
+  text-align: justify;
+}
+
+#reachOut {
+  color: #6498b3ff;
+  text-decoration: none !important;
+}
+
+#reachOut:hover {
+  color: brown;
+}
+
+#background_bear {
+  width: 100%;
+}
+
+.softwareLogos {
+  width: 80%;
+  transition: all .25s ease-in-out;
+  padding-bottom: 7%;
+}
+
+/* SECTION ABOUT ME END */
+
+
+/* VIDEO GALLERY START*/
+
+#portfolioVideography {
+  background-color: #f5f8faff;
+}
+
+#filterContainer {
+  background-color: #6096b2ff !important;
+  text-align: center;
+}
+
+#filterContainer .btn {
+  padding: 1%;
+  border-radius: 0;
+}
+
+.videoFilterButtons {
+  background-color: #6096b2ff !important;
+  color: white !important;
+  font-size: 1.5vh !important;
+}
+
+.videoFilterButtons:hover {
+  background-color: white !important;
+  color: #6096b2ff !important;
+}
+
+.containerItems {
+  overflow: hidden;
+}
+
+.filterDiv {
+  overflow: hidden;
+  float: left;
+  display: none;
+}
+
+#videoPlayer {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.movieContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video_thumbnails {
+  width: 100%;
+  transition: 0.5s ease all;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.show {
+  display: block;
+}
+
+.btn.activeMy {
+  background-color: white !important;
+  color: #6096b2ff !important;
+}
+
+.containerOverlay {
+  position: relative;
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: black;
+  cursor: pointer;
+}
+
+.containerOverlay:hover .overlay {
+  opacity: 0.8;
+}
+
+.text {
+  color: white;
+  font-size: 2vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* VIDEO GALLERY END*/
+
+
+/* SECTION BRANDS START */
+
+#sectionBrands {
+  height: 400px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+#textBrands {
+  text-align: center;
+  font-size: 2vh;
+  color: #6498b3ff;
+  padding-bottom: 5%;
+}
+
+// Brands animation
+
+$animationSpeed: 50s;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 11));
+  }
+}
+
+// Brands styling
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 768px;
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(250px * 22);
+  }
+
+  .slide {
+    height: 100px;
+    width: 250px;
+  }
+}
+
+/* SECTION BRANDS END */
+
+
+/* SECTION CONTACT ME START */
+
+#contactMe {
+  border-top: 1px solid lightgray !important;
+}
+
+.containerContact {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-image: url('./images/background/contact_background.webp');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 100vh;
+}
+
+.formContainer {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#textTouchBase {
+  font-size: 2vh;
+  color: #6498b3ff;
+}
+
+.socialIcon {
+  width: 10% !important;
+  transition: all .15s ease-in-out;
+}
+
+.form-control {
+  font-size: 1.5vh !important;
+  border: none !important;
+  border-radius: none !important;
+  background-color: transparent !important;
+}
+
+.buttonSubmit {
+  font-size: 1.5vh !important;
+  width: 20% !important;
+}
+
+.formContainer input {
+  border-radius: none !important;
+  border-bottom: 1px solid lightblue !important;
+}
+
+#textArea {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  overflow: auto;
+  outline: lightblue 1px solid;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+}
+
+.buttonSubmit {
+  background-color: #6096b2ff !important;
+  border-color: transparent !important;
+}
+
+.buttonSubmit:hover {
+  background-color: #a8744cff !important;
+}
+
+/* SECTION CONTACT ME END */
+
+
+/* SCROLL UP START */
+
+.bi-arrow-up-square-fill {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: red !important;
+  font-size: 50px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 5px grey);
+}
+
+/* SCROLL UP END */
+
+
+/* TRANSFORMING START */
+
+.msthebearLogo:hover,
+.toggleMenuButton:hover,
+#msthebearLogoOverlay:hover,
+.buttonCloseMenu:hover,
+.softwareLogos:hover,
+.socialIcon:hover {
+  transform: scale(1.2);
+}
+
+/* TRANSFORMING END */
+
+
+/* MOBILE VIEW START */
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .navbar-toggler {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .toggleMenuButton {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .bi-x-lg {
+    color: black !important;
+  }
+
+  .nav-item .nav-link {
+    font-size: 2rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .msthebearLogo {
+    height: 9% !important;
+    margin-left: 3%;
+    margin-top: 3%;
+  }
+
+  .aboutMeTextContainer {
+    width: 90% !important;
+  }
+
+  .aboutMeText {
+    -moz-text-align-last: center;
+    text-align-last: center;
+    font-size: 3vw;
+    color: grey;
+  }
+
+  .myName {
+    font-size: 7vw;
+  }
+
+  #textImMichal {
+    font-size: 7vw;
+    color: #6498b3ff;
+  }
+
+  .videoFilterButtons {
+    font-size: 2.5vw !important;
+  }
+
+  #textBrands {
+    font-size: 4vw;
+    padding-bottom: 60px;
+  }
+
+  #textTouchBase {
+    font-size: 4vw;
+  }
+
+  #filterContainer .btn {
+    padding: 2%;
+    border-radius: 0;
+  }
+
+  #textBrands {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .slider {
+    width: 400px;
+  }
+
+  .containerContact {
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 400% auto;
+    background-position-x: 50%;
+    background-position-y: 50%;
+  }
+
+  .msthebearLogo:hover,
+  .toggleMenuButton:hover,
+  #msthebearLogoOverlay:hover,
+  .buttonCloseMenu:hover,
+  .softwareLogos:hover,
+  .socialIcon:hover {
+    transform: scale(1);
+  }
+
+}
