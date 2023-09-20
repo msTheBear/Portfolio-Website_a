@@ -1,11 +1,11 @@
 // load spinner START
 
-// const preloader = document.querySelector(".preloaderWrapper");
+const preloader = document.querySelector(".preloaderWrapper");
 
-// window.addEventListener("load", function () {
-//     preloader.classList.add("fadeOut");
+window.addEventListener("load", function () {
+    preloader.classList.add("fadeOut");
 
-// });
+});
 
 // load spinner END
 
