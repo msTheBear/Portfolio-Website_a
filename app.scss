@@ -160,7 +160,7 @@ a:active {
 }
 
 .nav-item .nav-link {
-  font-size: 1.5rem !important;
+  font-size: 2rem !important;
   margin: 0 auto !important;
   width: 50%;
   display: flex !important;
@@ -658,18 +658,18 @@ textarea:focus {
     box-shadow: none !important;
   }
 
+  .bi-x-lg {
+    color: black !important;
+  }
+
   .toggleMenuButton {
     color: white;
     width: 80px;
     height: 80px;
   }
 
-  .bi-x-lg {
-    color: black !important;
-  }
-
   .nav-item .nav-link {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
