@@ -1,11 +1,42 @@
-html {
-  scroll-behavior: smooth;
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 html,
 body {
   font-family: "Cantarell" !important;
+  font-size: 20px !important;
+  scroll-behavior: auto !important;
   margin: 0;
+}
+
+.modal {
+  overflow: hidden !important;
+}
+
+.ratio-16x10 {
+  --bs-aspect-ratio: 52.75% !important;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+figure {
+  margin: 0 !important;
 }
 
 .preloaderWrapper {
@@ -42,7 +73,7 @@ a:active {
 .msthebearLogo {
   z-index: 999;
   position: fixed;
-  height: 12.5% !important;
+  height: 12.5%;
   transition: all linear 0.25s;
   margin-left: 1.5%;
   margin-top: 1%;
@@ -50,7 +81,7 @@ a:active {
 }
 
 .navLogoScroll {
-  height: 10% !important;
+  height: 10%;
 }
 
 .navbar-brand {
@@ -61,18 +92,14 @@ a:active {
   color: white !important;
 }
 
-.nav-item a {
-  font-size: 1.5vh !important;
-}
-
 .nav-item a:hover {
   color: #a8744c !important;
 }
 
 .toggleMenuButton {
   color: white;
-  width: 50px !important;
-  height: 50px !important;
+  width: 60px;
+  height: 60px;
   z-index: 9999;
   background-color: transparent;
   position: fixed;
@@ -116,16 +143,8 @@ a:active {
 }
 
 #msthebearLogoOverlay {
-  width: 35%;
-  transition: all 0.25s ease-in-out !important;
-}
-
-.buttonCloseMenu {
-  margin: 0 auto !important;
-  background-color: white !important;
-  width: 10%;
-  height: 10%;
-  transition: all 0.25s ease-in-out !important;
+  width: 200px;
+  transition: all 0.25s ease-in-out;
 }
 
 .bi-x-lg {
@@ -142,13 +161,26 @@ a:active {
   height: 100% !important;
 }
 
+.buttonCloseMenu {
+  margin: 0 auto !important;
+  background-color: white !important;
+  color: black !important;
+  width: 150px;
+  height: 50px;
+  transition: all 0.25s ease-in-out !important;
+}
+
 /* MENU OVERLAY END*/
 /* SECTION VIDEO START */
+#videoBackground {
+  position: relative;
+}
+
 .backgroundVideoImg {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -156,10 +188,6 @@ a:active {
   left: 0px;
   width: 100%;
   height: 100%;
-}
-
-#videoBackground {
-  position: relative;
 }
 
 #videoOnTv {
@@ -173,7 +201,7 @@ a:active {
 }
 
 #scrollContainer {
-  position: absolute !important;
+  position: absolute;
 }
 
 #scrollIcon {
@@ -184,72 +212,53 @@ a:active {
 }
 
 .floatingScroll {
-  -webkit-animation-name: floating;
   animation-name: floating;
-  -webkit-animation-duration: 3s;
   animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
-}
-
-@-webkit-keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-
-  50% {
-    transform: translate(0, 15px);
-  }
-
-  100% {
-    transform: translate(0, 0px);
-  }
 }
 
 @keyframes floating {
   0% {
     transform: translate(0, 0px);
   }
-
   50% {
     transform: translate(0, 15px);
   }
-
   100% {
     transform: translate(0, 0px);
   }
 }
-
 /* SECTION VIDEO END */
 /* SECTION ABOUT ME START */
 #aboutMe {
   text-align: center;
   min-height: 100vh;
   display: flex;
-  justify-content: center !important;
-  align-items: center !important;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
 }
 
 .aboutMeTextContainer {
-  width: 70% !important;
+  width: 70%;
 }
 
 .aboutMeText {
   -moz-text-align-last: center;
   text-align-last: center;
   font-size: 2vh;
-  color: grey;
+  color: #737373;
+  margin-bottom: 100px;
 }
 
 .myName {
   font-size: 4vh;
 }
 
-#textImMichal {
+#textTheBear {
   font-size: 4vh;
-  color: #6498b3;
+  color: #4A7D96;
 }
 
 #justifyText {
@@ -257,8 +266,8 @@ a:active {
 }
 
 #reachOut {
-  color: #6498b3;
-  text-decoration: none !important;
+  color: #4A7D96;
+  text-decoration: none;
 }
 
 #reachOut:hover {
@@ -267,6 +276,7 @@ a:active {
 
 #background_bear {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .softwareLogos {
@@ -277,12 +287,58 @@ a:active {
 
 /* SECTION ABOUT ME END */
 /* VIDEO GALLERY START*/
+#videoPlayer {
+  margin: 0 auto;
+  width: 100%;
+  background-color: black;
+}
+
+#projectButtonVideo {
+  background-color: black;
+  border: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  align-items: center;
+}
+
+#projectButtonContainer {
+  border: none;
+  height: 150px;
+  width: 100vw;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+#projectPlayButton {
+  width: 150px;
+}
+
+#transcriptContainer {
+  display: none;
+  width: 100%;
+  padding: 15px;
+  border: 6px solid white;
+  margin: 0 auto;
+  color: white;
+  position: relative;
+}
+
+#transcriptText {
+  margin-bottom: 0;
+}
+
 #portfolioVideography {
   background-color: #f5f8fa;
 }
 
 #filterContainer {
-  background-color: #6096b2 !important;
+  background-color: #4A7D96;
   text-align: center;
 }
 
@@ -292,14 +348,13 @@ a:active {
 }
 
 .videoFilterButtons {
-  background-color: #6096b2 !important;
+  background-color: #4A7D96;
   color: white !important;
-  font-size: 1.5vh !important;
 }
 
 .videoFilterButtons:hover {
   background-color: white !important;
-  color: #6096b2 !important;
+  color: #4A7D96 !important;
 }
 
 .containerItems {
@@ -310,28 +365,6 @@ a:active {
   overflow: hidden;
   float: left;
   display: none;
-}
-
-#videoPlayer {
-  margin: 0 auto;
-  width: 80%;
-}
-
-.movieContainer {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%;
-}
-
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .video_thumbnails {
@@ -348,7 +381,7 @@ a:active {
 
 .btn.activeMy {
   background-color: white !important;
-  color: #6096b2 !important;
+  color: #4A7D96 !important;
 }
 
 .containerOverlay {
@@ -357,6 +390,7 @@ a:active {
 }
 
 .overlay {
+  border: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -374,9 +408,9 @@ a:active {
   opacity: 0.8;
 }
 
-.text {
+.titlesContainer {
+  font-size: 1.5rem;
   color: white;
-  font-size: 2vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -384,42 +418,34 @@ a:active {
   text-align: center;
 }
 
+.titles {
+  font-size: 1.5rem;
+}
+
 /* VIDEO GALLERY END*/
 /* SECTION BRANDS START */
 #sectionBrands {
   height: 400px;
   display: flex;
-  justify-content: center !important;
-  align-items: center !important;
+  justify-content: center;
+  align-items: center;
 }
 
 #textBrands {
   text-align: center;
-  font-size: 2vh;
+  font-size: 2.5vh;
   color: #6498b3;
   padding-bottom: 5%;
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-2750px);
-  }
 }
 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-2750px);
   }
 }
-
 .slider {
   height: 100px;
   margin: auto;
@@ -427,14 +453,11 @@ a:active {
   position: relative;
   width: 768px;
 }
-
 .slider .slide-track {
-  -webkit-animation: scroll 50s linear infinite;
   animation: scroll 50s linear infinite;
   display: flex;
   width: 5500px;
 }
-
 .slider .slide {
   height: 100px;
   width: 250px;
@@ -443,14 +466,14 @@ a:active {
 /* SECTION BRANDS END */
 /* SECTION CONTACT ME START */
 #contactMe {
-  border-top: 1px solid lightgray !important;
+  border-top: 1px solid lightgray;
 }
 
 .containerContact {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: url("./images/background/contact_background.webp");
   background-repeat: no-repeat;
   background-position: center top;
@@ -459,34 +482,40 @@ a:active {
 }
 
 .formContainer {
-  display: flex !important;
-  flex-direction: column !important;
+  display: flex;
+  flex-direction: column;
   width: 80%;
   margin: 0 auto;
-  align-items: center !important;
-  justify-content: center !important;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  padding: 0 !important;
+}
+
+ul li {
+  display: inline-block;
 }
 
 #textTouchBase {
-  font-size: 2vh;
+  font-size: 1.5rem;
   color: #6498b3;
 }
 
 .socialIcon {
-  width: 10% !important;
+  width: 40px;
   transition: all 0.15s ease-in-out;
 }
 
 .form-control {
-  font-size: 1.5vh !important;
   border: none !important;
-  border-radius: none !important;
   background-color: transparent !important;
 }
 
 .buttonSubmit {
-  font-size: 1.5vh !important;
-  width: 20% !important;
+  width: 100px;
+  padding-left: 10px !important;
 }
 
 .formContainer input {
@@ -496,16 +525,23 @@ a:active {
 
 #textArea {
   border: none;
+  outline: none;
+  padding-left: 7px;
   width: 100%;
   background-color: transparent;
   overflow: auto;
   outline: lightblue 1px solid;
   box-shadow: none;
-  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: 6px solid rgb(1, 106, 171) !important;
+  border-radius: 10px !important;
 }
 
 .buttonSubmit {
-  background-color: #6096b2 !important;
+  background-color: #4A7D96 !important;
   border-color: transparent !important;
 }
 
@@ -521,7 +557,6 @@ a:active {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  color: red !important;
   font-size: 50px;
   cursor: pointer;
   filter: drop-shadow(0 0 5px grey);
@@ -540,6 +575,23 @@ a:active {
 
 /* TRANSFORMING END */
 /* MOBILE VIEW START */
+@media (max-width: 1500px) {
+  .aboutMeText {
+    margin-bottom: 50px;
+  }
+  .text {
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .titles {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 768px) {
   .modal-dialog {
     display: flex !important;
@@ -547,22 +599,14 @@ a:active {
     align-items: center !important;
     height: 100% !important;
   }
-
   .navbar-toggler {
     outline: none !important;
     border: none !important;
     box-shadow: none !important;
   }
-
-  .toggleMenuButton {
-    width: 60px !important;
-    height: 60px !important;
-  }
-
   .bi-x-lg {
     color: black !important;
   }
-
   .nav-item .nav-link {
     font-size: 2rem;
     display: flex !important;
@@ -570,60 +614,61 @@ a:active {
     align-items: center !important;
     height: 100% !important;
   }
-
+  .aboutMeTextContainer {
+    width: 100% !important;
+  }
+  .aboutMeText {
+    font-size: 1rem !important;
+  }
+  #aboutMe {
+    min-height: 800px;
+    margin: 50px;
+  }
   .msthebearLogo {
-    height: 9% !important;
+    height: 9%;
     margin-left: 3%;
     margin-top: 3%;
   }
-
   .aboutMeTextContainer {
-    width: 90% !important;
+    width: 90%;
   }
-
   .aboutMeText {
     -moz-text-align-last: center;
     text-align-last: center;
     font-size: 3vw;
     color: grey;
   }
-
   .myName {
     font-size: 7vw;
   }
-
-  #textImMichal {
+  #textTheBear {
     font-size: 7vw;
-    color: #6498b3;
+    color: #4A7D96;
   }
-
   .videoFilterButtons {
-    font-size: 2.5vw !important;
+    font-size: 0.8rem !important;
   }
-
+  #projectPlayButton {
+    max-width: 100px !important;
+  }
   #textBrands {
-    font-size: 4vw;
+    font-size: 1.2rem;
     padding-bottom: 60px;
   }
-
   #textTouchBase {
-    font-size: 4vw;
+    font-size: 1.2rem;
   }
-
   #filterContainer .btn {
     padding: 2%;
     border-radius: 0;
   }
-
   #textBrands {
     width: 80%;
     margin: 0 auto;
   }
-
   .slider {
     width: 400px;
   }
-
   .containerContact {
     height: 600px;
     background-repeat: no-repeat;
@@ -632,7 +677,6 @@ a:active {
     background-position-x: 50%;
     background-position-y: 50%;
   }
-
   .msthebearLogo:hover,
   .toggleMenuButton:hover,
   #msthebearLogoOverlay:hover,
@@ -642,12 +686,7 @@ a:active {
     transform: scale(1);
   }
 }
-
-/*# sourceMappingURL=app.css.map */
-
-
 /* THANK YOU PAGE START */
-
 .thankYouSection {
   height: 100vh;
   display: flex;
@@ -656,11 +695,12 @@ a:active {
 }
 
 .thankYouContainer {
+  width: 450px;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
   margin: 0 auto;
-  background-color: #f5f8faff;
+  background-color: #f5f8fa;
   border-radius: 50px;
 }
 
@@ -668,7 +708,7 @@ a:active {
   width: 100% !important;
   height: 200px;
   display: flex;
-  background-color: #6697b2ff;
+  background-color: #6697b2;
   align-items: center;
   justify-content: center;
   margin-bottom: 5%;
@@ -677,7 +717,7 @@ a:active {
 #msthebearLogo_ {
   width: 200px;
   margin-bottom: 5%;
-  transition: all .25s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #msthebearLogo_:hover {
@@ -685,7 +725,7 @@ a:active {
 }
 
 #thankYouText {
-  color: #6697b2ff;
+  color: #6697b2;
   padding-bottom: 5%;
 }
 
@@ -695,12 +735,13 @@ a:active {
   margin-bottom: 5%;
   border: none;
   color: white;
-  background-color: orange;
+  background-color: #ED7112;
+  transition: all 0.3s ease-in-out;
 }
 
 #buttonBackHome:hover {
   color: white;
-  background-color: #6697b2ff;
+  background-color: #6697b2;
 }
 
 #socialIconsBox {
@@ -711,11 +752,11 @@ a:active {
 .socialIcon_ {
   width: 50px;
   margin: 30px;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .socialIcon_:hover {
   transform: scale(1.25);
 }
 
-/* THANK YOU PAGE END */
+/* THANK YOU PAGE END *//*# sourceMappingURL=app.css.map */

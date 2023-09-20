@@ -6,375 +6,526 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
-    <title>Michal Szymczak - Videographer</title>
-    <!-- CSS only -->
+    <title>Michal Szymczak - Videography Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cantarell">
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+
 </head>
 
 <body>
 
-    <div class="preloaderWrapper">
-        <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+    <!-- SPINNER LOADER START -->
+
+    <!-- <div class="preloaderWrapper">
+        <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;">
             <span class="visually-hidden">Loading...</span>
         </div>
-    </div>
+    </div> -->
 
-    <a href="#">
-        <img src="./images/icons/msthebear_logo.svg" class="msthebearLogo" alt="Michal Szymczak's Logo">
-    </a>
+    <!-- SPINNER LOADER END -->
 
-    <button class="toggleMenuButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="currentColor" class="bi bi-list"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-        </svg>
-    </button>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+    <!-- HEADER START -->
 
-                        <a class="mx-auto centerAlign" href="https://msthebear.github.io/Portfolio-Website_a/">
-                            <img src="./images/icons/msthebear_logo.svg" id="msthebearLogoOverlay"
-                                alt="Michal Szymczak's Logo" srcset="">
+    <header>
+        <figure>
+            <a href="#">
+                <img src="./images/icons/msthebear_logo.svg" role="img" class="msthebearLogo"
+                    alt="Michal Szymczak's Logo" loading="lazy">
+            </a>
+        </figure>
+    </header>
+
+    <!-- HEADER END -->
+
+
+    <!-- NAVBAR START -->
+
+    <nav>
+        <button class="toggleMenuButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modal-header">
+                            <h5 class="modal-title sr-only" id="exampleModalLabel">Navigation with 5 menu objects</h5>
+                        </div>
+                        <a class="mx-auto centerAlign" href="#">
+                            <figure>
+                                <img src="./images/icons/msthebear_logo.svg" role="img" id="msthebearLogoOverlay"
+                                    alt="Michal Szymczak's Logo" loading="lazy">
+                            </figure>
                         </a>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#aboutMe">About
-                                Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolioVideography">Videography</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contactMe">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary buttonCloseMenu" data-bs-dismiss="modal">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="" height="" fill="currentColor"
-                                class="bi bi-x-lg" viewBox="0 0 16 16">
-                                <path
-                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
-                                </path>
-                            </svg>
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+                            <li class="nav-item" data-bs-dismiss="modal">
+                                <a class="nav-link active" aria-current="page" href="#home">
+                                    <p class="sr-only">Go to</p>Home<p class="sr-only">section</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-bs-dismiss="modal">
+                                <a class="nav-link" href="#aboutMe">
+                                    <p class="sr-only">Go to</p>About
+                                    Me<p class="sr-only">section</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-bs-dismiss="modal">
+                                <a class="nav-link" href="#portfolioVideography">
+                                    <p class="sr-only">Go to</p>Videography<p class="sr-only">section</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-bs-dismiss="modal">
+                                <a class="nav-link" href="#contactMe">
+                                    <p class="sr-only">Go to</p>Contact Me<p class="sr-only">section</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary buttonCloseMenu"
+                                data-bs-dismiss="modal">Close<p class="sr-only">navigation</p></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAVBAR END -->
+
+
+    <main>
+
+
+        <!-- HOME START -->
+
+        <section id="home">
+            <p class="sr-only">Home</p>
+            <div id="videoBackground">
+                <div class="scrollContainer" aria-hidden="true">
+                    <figure class="floatingScroll">
+                        <img src="./images/icons/scroll.svg" role="img" alt="Scroll down icon" id="scrollIcon"
+                            loading="lazy">
+                    </figure>
+                </div>
+                <figure>
+                    <img src="./images/background/video_background.webp" class="img-fluid backgroundVideoImg"
+                        alt="Big retro TV on a shelf background" loading="lazy">
+                </figure>
+                <video playsinline muted loop id="videoOnTv" poster="./images/video_thumbnails/poster.webp"
+                    aria-label="Player">
+                    <source src="https://pulmonika.com/wp-content/uploads/2023/01/TvReel.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- HOME END -->
+
+
+        <!-- ABOUT ME START -->
+
+        <section id="aboutMe">
+            <p class="sr-only">About me</p>
+            <div class=" aboutMeTextContainer">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-xxl-6">
+                        <p class="aboutMeText"><span class="myName">Greetings!<br>I’m Michal
+                            </span><span id="textTheBear">'The
+                                Bear'</span><span class="myName"> Szymczak</span><br><br>
+                            <span id="justifyText">I’m a Videographer & Video Editor based in Los
+                                Angeles.
+                                I have 3 years of
+                                experience working with professional cameras, including Blackmagic,
+                                Sony,
+                                Panasonic,
+                                JVC, audio recording and lightning equipment. As a videographer I know
+                                the ins
+                                and outs of post production workflow: editing, color grading and sound
+                                design.
+                                I’ve
+                                had
+                                the
+                                pleasure to work on short films, short documentaries, corporate videos,
+                                interviews,
+                                music
+                                videos, social media content, live events, wedding videos, promo videos
+                                and behind
+                                the
+                                scenes.<br><br>
+                                I'm constantly looking for interesting projects, <a href="#contactMe"><span
+                                        id="reachOut">so reach out to me</span></a>
+                                and we’ll create
+                                something great together!</span>
+                        </p>
+                    </div>
+
+                    <figure class="col-sm-12 col-xxl-6">
+                        <img src="./images/icons/bear.svg" role="img" alt="Bear" id="background_bear" loading="lazy">
+                    </figure>
+
+                    <figure class="col-4 col-lg-2">
+                        <img src="./images/icons/software/Sony_logo.png" alt="Sony logo" class="softwareLogos"
+                            loading="lazy">
+                    </figure>
+                    <figure class="col-4 col-lg-2">
+                        <img src="./images/icons/software/BlackmagicDesign_logo.png" alt="Blackmagic Design logo"
+                            class="softwareLogos" loading="lazy">
+                    </figure>
+                    <figure class="col-4 col-lg-2">
+                        <img src="./images/icons/software/CaptureOne_logo.png" alt="Capture One logo"
+                            class="softwareLogos" loading="lazy">
+                    </figure>
+                    <figure class="col-4 col-lg-2">
+                        <img src="./images/icons/software/DaVinciResolve_logo.png" alt="DaVinci Resolve logo"
+                            class="softwareLogos" loading="lazy">
+                    </figure>
+                    <figure class="col-4 col-lg-2">
+                        <img src="./images/icons/software/AdobePremierePro_logo.png" alt="Adobe Premiere Pro logo"
+                            class="softwareLogos" loading="lazy">
+                    </figure>
+                    <figure class="col-4 col-lg-2">
+                        <img src="./images/icons/software/AdobePhotoshop_logo.png" alt="Adobe Photoshop logo"
+                            class="softwareLogos" loading="lazy">
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME END -->
+
+
+        <!-- VIDEOGRAPHY PORTFOLIO START -->
+
+        <section id="portfolioVideography">
+            <p class="sr-only">Videography portfolio</p>
+            <div id="filterContainer">
+                <button class="btn activeMy videoFilterButtons" type="button"
+                    onclick="filterSelection('all'); hideCollapse()">
+                    SHOW
+                    ALL<p class="sr-only">projects</p></button><button class="btn videoFilterButtons"
+                    onclick="filterSelection('showreel'); hideCollapse()">
+                    <p class="sr-only">Show</p>SHOWREEL<p class="sr-only">video</p>
+                </button><button class="btn videoFilterButtons"
+                    onclick="filterSelection('screenWriter'); hideCollapse()">
+                    <p class="sr-only">Show all</p>SCREENWRITER<p class="sr-only">projects</p>
+                </button><button class="btn videoFilterButtons"
+                    onclick="filterSelection('videographer'); hideCollapse()">
+                    <p class="sr-only">Show all</p>VIDEOGRAPHER<p class="sr-only">projects</p>
+                </button><button class="btn videoFilterButtons"
+                    onclick="filterSelection('cameraOperator'); hideCollapse()">
+                    <p class="sr-only">Show all</p>CAMERA
+                    OPERATOR<p class="sr-only">projects</p>
+                </button><button class="btn videoFilterButtons"
+                    onclick="filterSelection('videoEditor'); hideCollapse()">
+                    <p class="sr-only">Show all</p>VIDEO
+                    EDITOR<p class="sr-only">projects</p>
+                </button><button class="btn videoFilterButtons" onclick="filterSelection('colorist'); hideCollapse()">
+                    <p class="sr-only">Show all</p>COLORIST<p class="sr-only">projects</p>
+                </button>
+            </div>
+
+            <div class="collapse" id="myCollapse">
+                <div id="projectButtonVideo">
+                    <div id="videoPlayer" class="">
+                        <button id="projectButtonContainer">
+                            <img src="./images/icons/playButton.png" id="projectPlayButton" alt="Play video">
                         </button>
+                        <iframe id="myFrame" src="https://player.vimeo.com/video/567017878?h=d59e1cf86c"
+                            title="Vimeo video player" frameborder="0" autoplay=1
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div id="transcriptContainer">
+                        <p>TRANSCRIPT</p>
+                        <p id="transcriptText"></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <section id="home">
-        <div id="videoBackground">
-            <div class="scrollContainer">
-                <div class="floatingScroll">
-                    <img src="./images/icons/scroll.svg" alt="Scroll down icon" id="scrollIcon">
+            <div class="containerItems text-center">
+                <div class="row g-0">
+                    <figure class="col-md-4 filterDiv containerOverlay showreel" data-bs-target="#myCollapse"
+                        onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/reel.webp" id="videoShowreel" class="video_thumbnails"
+                            alt="Showreel video" loading="lazy">
+                        <button class="overlay" onclick="videoShowreel()">
+                            <div class="titlesContainer"><span class="titles">Showreel</span></div>
+                        </button>
+                    </figure>
+                    <figure class="col-md-4 filterDiv containerOverlay screenWriter" data-bs-target="#myCollapse"
+                        onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/thelastsupper.webp" id="videoTheLastSupper"
+                            class="video_thumbnails fade-in" alt="The Last Supper video" loading="lazy">
+                        <button class="overlay" onclick="videoSupper()">
+                            <div class="titlesContainer"><span class="titles">The Last Supper</span><br>Short Film
+                            </div>
+                        </button>
+                    </figure>
+                    <figure class="col-md-4 filterDiv containerOverlay videographer" data-bs-target="#myCollapse"
+                        onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/wordsofseduction.webp" id="videoWordsOfSeduction"
+                            class="video_thumbnails" alt="Words of Seduction video" loading="lazy">
+                        <button class="overlay" onclick="videoWords()">
+                            <div class="titlesContainer"><span class="titles">Words Of Seduction</span><br>Short
+                                Film</div>
+                        </button>
+                    </figure>
+                    <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
+                        data-bs-target="#myCollapse" onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/forks.webp" id="videoForks" class="video_thumbnails"
+                            alt="Forks & Green video" loading="lazy">
+                        <button class="overlay" onclick="videoForks()">
+                            <div class="titlesContainer"><span class="titles">Forks & Green</span><br>Promo Video
+                            </div>
+                        </button>
+                    </figure>
+                    <figure class="col-md-4 filterDiv containerOverlay cameraOperator" data-bs-target="#myCollapse"
+                        onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/alim.webp" id="videoAlim" class="video_thumbnails"
+                            alt="Alim 'Bounce' video" loading="lazy">
+                        <button class="overlay" onclick="videoAlim()">
+                            <div class="titlesContainer"><span class="titles">Alim "Bounce"</span><br>Music Video
+                            </div>
+                        </button>
+                    </figure>
+                    <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
+                        data-bs-target="#myCollapse" onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/traintogenzo.webp" id="videoTrainToGenzo"
+                            class="video_thumbnails" alt="Train to Genzo video" loading="lazy">
+                        <button class="overlay" onclick="videoTrain()">
+                            <div class="titlesContainer"><span class="titles">Train To Genzo</span><br>Behind The
+                                Scenes</div>
+                        </button>
+                    </figure>
+                    <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
+                        data-bs-target="#myCollapse" onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/Brios.webp" id="videoBrios" class="video_thumbnails"
+                            alt="Brios video" loading="lazy">
+                        <button class="overlay" onclick="videoBrios()">
+                            <div class="titlesContainer"><span class="titles">Brios</span><br>Promo Video</div>
+                        </button>
+                    </figure>
+                    <figure class="col-md-4 filterDiv containerOverlay videoEditor" data-bs-target="#myCollapse"
+                        onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/thebanc.webp" id="videoTheBanc" class="video_thumbnails"
+                            alt="The Banc video" loading="lazy">
+                        <button class="overlay" onclick="videoTheBanc()">
+                            <div class="titlesContainer"><span class="titles">The Banc Highlights</span><br>Promo
+                                Video</div>
+                        </button>
+                    </figure>
+                    <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
+                        data-bs-target="#myCollapse" onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/pride.webp" id="videoPride" class="video_thumbnails"
+                            alt="Pride in London video" loading="lazy">
+                        <button class="overlay" onclick="videoPride()">
+                            <div class="titlesContainer"><span class="titles">Pride In London</span><br>Promo Video
+                            </div>
+                        </button>
+                    </figure>
+                    <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
+                        data-bs-target="#myCollapse" onclick="showCollapse()">
+                        <img src="./images/video_thumbnails/mrmrs.webp" id="videoMrMrs" class="video_thumbnails"
+                            alt="Mr & Mrs Johnson video" loading="lazy">
+                        <button class="overlay" onclick="videoMrMrs()">
+                            <div class="titlesContainer"><span class="titles">Mr & Mrs Johnson</span><br>Wedding
+                                Video</div>
+                        </button>
+                    </figure>
                 </div>
             </div>
-            <img src="./images/background/video_background.webp" class="img-fluid backgroundVideoImg"
-                alt="Monitor background">
-            <video playsinline autoplay muted loop id="videoOnTv">
-                <source src="https://pulmonika.com/wp-content/uploads/2023/01/TvReel.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
+        </section>
 
-    <section id="aboutMe">
-        <div class=" aboutMeTextContainer">
-            <div class="row align-items-center">
-                <div class="col-sm-12 col-xxl-6">
-                    <p class="aboutMeText">Hi, I’m <span class="myName">Michal </span><span id="textImMichal">'The
-                            Bear'</span><span class="myName"> Szymczak</span><br><br>
-                        <span id="justifyText">I’m a <b>Videographer & Video Editor</b> based in <b>Los Angeles</b>. I
-                            have 3 years of
-                            experience working with professional cameras, including <b>Blackmagic, Sony, Panasonic,
-                                JVC,</b>
-                            audio recording and lightning equipment.<br>As a videographer I know the ins
-                            and outs of post production workflow: <b>editing, color grading and sound design</b>. I’ve
-                            had
-                            the
-                            pleasure to work on <b>short films, short documentaries, corporate videos, interviews, music
-                                videos, social media content, live events, wedding videos, promo videos and behind the
-                                scenes</b>.<br><br>
-                            I'm constantly looking for interesting projects, so <a href="#contactMe"><b><span
-                                        id="reachOut">
-                                        reach out</span></b></a> to me and we’ll create
-                            something <b>great</b> together!</span>
-                    </p>
-                </div>
+        <!-- VIDEOGRAPHY PORTFOLIO END -->
 
-                <div class="col-sm-12 col-xxl-6">
-                    <img id="background_bear" src="./images/icons/bear.svg" alt="Bear image">
-                </div>
 
-                <div class="col-4 col-lg-2">
-                    <img src="./images/icons/software/Sony_logo.png" alt="Sony logo" class="softwareLogos">
-                </div>
-                <div class="col-4 col-lg-2">
-                    <img src="./images/icons/software/BlackmagicDesign_logo.png" alt="Blackmagic Design logo"
-                        class="softwareLogos">
-                </div>
-                <div class="col-4 col-lg-2">
-                    <img src="./images/icons/software/CaptureOne_logo.png" alt="Capture One logo" class="softwareLogos">
-                </div>
-                <div class="col-4 col-lg-2">
-                    <img src="./images/icons/software/DaVinciResolve_logo.png" alt="DaVinci Resolve logo"
-                        class="softwareLogos">
-                </div>
-                <div class="col-4 col-lg-2">
-                    <img src="./images/icons/software/AdobePremierePro_logo.png" alt="Adobe Premiere Pro logo"
-                        class="softwareLogos">
-                </div>
-                <div class="col-4 col-lg-2">
-                    <img src="./images/icons/software/AdobePhotoshop_logo.png" alt="Adobe Photoshop logo"
-                        class="softwareLogos">
-                </div>
+        <!-- BRANDS SECTION START -->
 
-            </div>
-        </div>
-    </section>
+        <section id="sectionBrands">
+            <p class="sr-only">The brands I work with</p>
+            <div>
+                <p id="textBrands">I work with the most influential companies in the field.</p>
+                <div>
+                    <div class="slider">
+                        <div class="slide-track">
+                            <figure class="slide">
+                                <img src="./images/icons/brands/ADP_logo.svg" role="img" alt="ADP logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/Ascend_logo.svg" role="img" alt="Ascend logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/CedarsSinai_logo.svg" role="img" alt="Cedars Sinai logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/Disneyland_logo.svg" role="img" alt="Disneyland logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/Encore_logo.png" role="img" alt="Encore logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/Hilton_logo.svg" role="img" alt="Hilton logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/Hyatt-Regency_logo.svg" role="img"
+                                    alt="Hyatt Regency logo" loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/Marriott_logo.svg" role="img" alt="Marriot logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/SaturnAwards_logo.svg" role="img"
+                                    alt="Saturns Awards logo" loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/Sheraton_logo.svg" role="img" alt="Sheraton logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/TerraneaResort_logo.svg" role="img"
+                                    alt="Terranea Resort logo" loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/ADP_logo.svg" role="img" alt="ADP logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/Ascend_logo.svg" role="img" alt="Ascend logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/CedarsSinai_logo.svg" role="img" alt="Cedars Sinai logo"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="slide">
+                                <img src="./images/icons/brands/Disneyland_logo.svg" role="img" alt="Disneyland logo"
+                                    loading="lazy" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+        </section>
 
-    <section id="portfolioVideography">
-        <div id="filterContainer">
-            <button class="btn activeMy videoFilterButtons"
-                onclick="filterSelection('all'); hidePlayer(); hideCollapse()">
-                SHOW
-                ALL</button><button class="btn videoFilterButtons"
-                onclick="filterSelection('showreel'); hidePlayer(); hideCollapse()">
-                SHOWREEL</button><button class="btn videoFilterButtons"
-                onclick="filterSelection('screenWriter'); hidePlayer(); hideCollapse()">
-                SCREENWRITER</button><button class="btn videoFilterButtons"
-                onclick="filterSelection('videographer'); hidePlayer(); hideCollapse()">
-                VIDEOGRAPHER</button><button class="btn videoFilterButtons"
-                onclick="filterSelection('cameraOperator'); hidePlayer(); hideCollapse()"> CAMERA
-                OPERATOR</button><button class="btn videoFilterButtons"
-                onclick="filterSelection('videoEditor'); hidePlayer(); hideCollapse()"> VIDEO
-                EDITOR</button><button class="btn videoFilterButtons"
-                onclick="filterSelection('colorist'); hidePlayer(); hideCollapse()">
-                COLORIST</button>
-        </div>
+        <!-- BRANDS SECTION END -->
 
-        <div class="collapse" id="myCollapse">
-            <div id="videoPlayer">
-                <div class="movieContainer">
-                    <iframe width="" height="" id="myFrame" class="responsive-iframe"
-                        src="https://player.vimeo.com/video/567017878?h=d59e1cf86c" frameborder="0"
-                        allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
 
-        <div class="containerItems text-center">
-            <div class="row g-0">
-                <div class="col-md-4 filterDiv containerOverlay showreel" data-bs-target="#myCollapse"
-                    onclick="showCollapse()">
-                    <img id="videoShowreel" class="video_thumbnails" src="./images/video_thumbnails/reel.webp"
-                        alt="Showreel still">
-                    <div class="overlay" onclick="videoShowreel()">
-                        <div class="text"><span class="titles">Showreel</span></div>
+        <!-- CONTACT ME SECTION START -->
+
+        <section id="contactMe">
+            <p class="sr-only">Contact me</p>
+            <div class="containerContact">
+                <div class="formContainer">
+                    <div class="text-center">
+                        <p id="textTouchBase">Touch base with me</p><br>
+
+                        <ul>
+                            <li>
+                                <figure>
+                                    <a href="https://www.instagram.com/msthebear/" target="_blank">
+                                        <img src="./images/icons/social media/Instagram_logo.svg" role="img"
+                                            alt="Instagram logo" class="socialIcon" loading="lazy">
+                                    </a>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href="https://vimeo.com/michalthebear" target="_blank">
+                                        <img src="./images/icons/social media/vimeo_logo.svg" role="img"
+                                            alt="Vimeo logo" class="socialIcon" loading="lazy">
+                                    </a>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href="https://www.linkedin.com/in/michalthebear/" target="_blank">
+                                        <img src="./images/icons/social media/linkedIn_logo.svg" role="img"
+                                            alt="LinkedId logo" class="socialIcon" loading="lazy">
+                                    </a>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href="https://www.imdb.com/name/nm11515436/" target="_blank">
+                                        <img src="./images/icons/social media/imdb_logo.svg" role="img" alt="IMDB logo"
+                                            class="socialIcon" loading="lazy">
+                                    </a>
+                                </figure>
+                            </li>
+                        </ul>
+
                     </div>
-                </div>
-                <div class="col-md-4 filterDiv containerOverlay screenWriter" data-bs-target="#myCollapse"
-                    onclick="showCollapse()">
-                    <img id="videoTheLastSupper" class="video_thumbnails fade-in"
-                        src="./images/video_thumbnails/thelastsupper.webp" alt="The Last Supper still">
-                    <div class="overlay" onclick="videoSupper()">
-                        <div class="text"><span class="titles">The Last Supper</span><br>Short Film</div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv containerOverlay videographer" data-bs-target="#myCollapse"
-                    onclick="showCollapse()">
-                    <img id="videoWordsOfSeduction" class="video_thumbnails"
-                        src="./images/video_thumbnails/wordsofseduction.webp" alt="Words of Seduction still">
-                    <div class="overlay" onclick="videoWords()">
-                        <div class="text"><span class="titles">Words Of Seduction</span><br>Short Film</div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
-                    data-bs-target="#myCollapse" onclick="showCollapse()">
-                    <img id="videoForks" class="video_thumbnails" src="./images/video_thumbnails/forks.webp"
-                        alt="Forks & Green still">
-                    <div class="overlay" onclick="videoForks()">
-                        <div class="text"><span class="titles">Forks & Green</span><br>Promo Video</div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv containerOverlay cameraOperator" data-bs-target="#myCollapse"
-                    onclick="showCollapse()">
-                    <img id="videoAlim" class="video_thumbnails" src="./images/video_thumbnails/alim.webp"
-                        alt="Alim 'Bounce' still">
-                    <div class="overlay" onclick="videoAlim()">
-                        <div class="text"><span class="titles">Alim "Bounce"</span><br>Music Video</div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
-                    data-bs-target="#myCollapse" onclick="showCollapse()">
-                    <img id="videoTrainToGenzo" class="video_thumbnails"
-                        src="./images/video_thumbnails/traintogenzo.webp" alt="Train to Genzo still">
-                    <div class="overlay" onclick="videoTrain()">
-                        <div class="text"><span class="titles">Train To Genzo</span><br>Behind The Scenes</div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
-                    data-bs-target="#myCollapse" onclick="showCollapse()">
-                    <img id="videoBrios" class="video_thumbnails" src="./images/video_thumbnails/Brios.webp"
-                        alt="Brios still">
-                    <div class="overlay" onclick="videoBrios()">
-                        <div class="text"><span class="titles">Brios</span><br>Promo Video</div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv containerOverlay videoEditor" data-bs-target="#myCollapse"
-                    onclick="showCollapse()">
-                    <img id="videoTheBanc" class="video_thumbnails" src="./images/video_thumbnails/thebanc.webp"
-                        alt="The Banc still">
-                    <div class="overlay" onclick="videoTheBanc()">
-                        <div class="text"><span class="titles">The Banc Highlights</span><br>Promo Video</div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
-                    data-bs-target="#myCollapse" onclick="showCollapse()">
-                    <img id="videoPride" class="video_thumbnails" src="./images/video_thumbnails/pride.webp"
-                        alt="Pride in London still">
-                    <div class="overlay" onclick="videoPride()">
-                        <div class="text"><span class="titles">Pride In London</span><br>Promo Video</div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
-                    data-bs-target="#myCollapse" onclick="showCollapse()">
-                    <img id="videoMrMrs" class="video_thumbnails" src="./images/video_thumbnails/mrmrs.webp"
-                        alt="Mr & Mrs Johnson still">
-                    <div class="overlay" onclick="videoMrMrs()">
-                        <div class="text"><span class="titles">Mr & Mrs Johnson</span><br>Wedding Video</div>
-                    </div>
+
+                    <form class="row g-0 needs-validation" id="contactform"
+                        action="https://formsubmit.co/890cbc8db2154b57744911c5c99132bd" method="POST">
+
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New E-mail">
+
+                        <div class="col-md-12">
+                            <input type="text" class="form-control rounded-0" placeholder="Name" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input type="email" autocomplete="off" class="form-control rounded-0" name="email"
+                                placeholder="E-mail" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <p class="sr-only">Please type your message</p>
+                            <textarea rows="4" cols="50" name="name" id="textArea" placeholder=" Your message"
+                                required></textarea>
+                        </div>
+
+                        <input type="hidden" name="_next"
+                            value="https://msthebear.github.io/Portfolio-Website_a/thankyou">
+
+                        <div class="col-12 text-center">
+                            <br>
+                            <button class="btn btn-primary buttonSubmit rounded-0" type="submit"
+                                form="contactform">Send</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="sectionBrands">
-        <div>
-            <p id="textBrands">I work with the most influential companies in the field.</p>
+        <!-- CONTACT ME SECTION END -->
 
-            <div class="slider">
-                <div class="slide-track">
-                    <div class="slide">
-                        <img src="./images/icons/brands/ADP_logo.svg" alt="ADP logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/Ascend_logo.svg" alt="Ascend logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/CedarsSinai_logo.svg" alt="Cedars Sinai logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/Disneyland_logo.svg" alt="Disneyland logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/Encore_logo.png" alt="Encore logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/Hilton_logo.svg" alt="Hilton logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/Hyatt-Regency_logo.svg" alt="Hyatt Regency logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/Marriott_logo.svg" alt="Marriot logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/SaturnAwards_logo.svg" alt="Saturns Awards logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/Sheraton_logo.svg" alt="Sheraton logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/TerraneaResort_logo.svg" alt="Terranea Resort logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/ADP_logo.svg" alt="ADP logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/Ascend_logo.svg" alt="Ascend logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/CedarsSinai_logo.svg" alt="Cedars Sinai logo" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/icons/brands/Disneyland_logo.svg" alt="Disneyland logo" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="contactMe">
-        <div class="containerContact">
-            <div class="formContainer">
-                <div class="text-center">
-                    <p id="textTouchBase">Touch base with me</p>
+    </main>
 
-                    <div>
-                        <a href="https://www.instagram.com/msthebear/" target="_blank"><img
-                                src="./images/icons/social media/instagram_logo.png" alt="Instagram logo"
-                                class="socialIcon"></a>
-                        <a href="https://vimeo.com/michalthebear" target="_blank"><img
-                                src="./images/icons/social media/vimeo_logo.svg" alt="Vimeo logo"
-                                class="socialIcon"></a>
-                        <a href="https://www.linkedin.com/in/michalthebear/" target="_blank"><img
-                                src="./images/icons/social media/linkedIn_logo.svg" alt="LinkedId logo"
-                                class="socialIcon"></a>
-                        <a href="https://www.imdb.com/name/nm11515436/" target="_blank"><img
-                                src="./images/icons/social media/imdb_logo.svg" alt="IMDB logo" class="socialIcon"></a>
-                    </div>
 
-                </div>
-
-                <form class="row g-0 needs-validation" id="contactform"
-                    action="https://formsubmit.co/890cbc8db2154b57744911c5c99132bd" method="POST">
-
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="New E-mail">
-
-                    <div class="col-md-12">
-                        <input type="text" class="form-control rounded-0" placeholder="Name" required>
-                    </div>
-
-                    <div class="col-md-12">
-                        <input type="email" class="form-control rounded-0" name="email" placeholder="E-mail" required>
-                    </div>
-
-                    <div class="col-md-12">
-                        <textarea rows="4" cols="50" name="name" id="textArea" placeholder=" Your message"
-                            required></textarea>
-                    </div>
-
-                    <input type="hidden" name="_next" value="https://msthebear.github.io/Portfolio-Website_a/thankyou">
-
-                    <div class="col-12 text-center">
-                        <br><button class="btn btn-primary buttonSubmit rounded-0" type="submit"
-                            form="contactform">Send</button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </section>
+    <!-- GO TO TOP START -->
 
     <a href="#home">
+        <p class="sr-only">Go to the top of the site</p>
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-arrow-up-square-fill"
             viewBox="0 0 16 16">
             <path
                 d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
         </svg>
     </a>
+
+    <!-- GO TO TOP END -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
