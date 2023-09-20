@@ -604,6 +604,11 @@ textarea:focus {
     border: none !important;
     box-shadow: none !important;
   }
+  .toggleMenuButton {
+    color: white;
+    width: 80px;
+    height: 80px;
+  }
   .bi-x-lg {
     color: black !important;
   }
