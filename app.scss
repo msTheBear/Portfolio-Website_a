@@ -262,9 +262,9 @@ a:active {
 }
 
 .aboutMeText {
+  font-size: 1.2rem;
   -moz-text-align-last: center;
   text-align-last: center;
-  font-size: 2vh;
   color: #737373;
   margin-bottom: 100px;
 }
@@ -297,9 +297,9 @@ a:active {
 }
 
 .softwareLogos {
-  width: 80%;
+  width: 150px;
   transition: all .25s ease-in-out;
-  padding-bottom: 7%;
+  padding-bottom: 20px;
 }
 
 /* SECTION ABOUT ME END */
@@ -391,7 +391,6 @@ a:active {
   width: 100%;
   transition: 0.5s ease all;
   display: block;
-  width: 100%;
   height: auto;
 }
 
@@ -429,17 +428,13 @@ a:active {
 }
 
 .titlesContainer {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.titles {
-  font-size: 1.5rem;
 }
 
 /* VIDEO GALLERY END*/
@@ -579,7 +574,7 @@ textarea:focus {
 }
 
 .buttonSubmit {
-  background-color: #4A7D96 !important;
+  background-color: #335e74 !important;
   border-color: transparent !important;
 }
 
@@ -638,9 +633,15 @@ textarea:focus {
     text-align: center;
   }
 
-  .titles {
-    font-size: 1rem;
+  #background_bear {
+    width: 50%;
+    margin-bottom: 50px;
   }
+
+  .softwareLogos {
+    width: 100px;
+  }
+
 
 }
 
@@ -676,14 +677,6 @@ textarea:focus {
     height: 100% !important;
   }
 
-  .aboutMeTextContainer {
-    width: 100% !important;
-  }
-
-  .aboutMeText {
-    font-size: 1rem !important;
-  }
-
   #aboutMe {
     min-height: 800px;
     margin: 50px;
@@ -696,14 +689,14 @@ textarea:focus {
   }
 
   .aboutMeTextContainer {
-    width: 90%;
+    width: 100%;
   }
 
   .aboutMeText {
     -moz-text-align-last: center;
     text-align-last: center;
-    font-size: 3vw;
     color: grey;
+    font-size: 1rem;
   }
 
   .myName {
@@ -715,8 +708,17 @@ textarea:focus {
     color: #4A7D96;
   }
 
+  #background_bear {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .softwareLogos {
+    width: 80px;
+  }
+
   .videoFilterButtons {
-    font-size: 0.8rem !important;
+    font-size: 0.6rem !important;
   }
 
   #projectPlayButton {
@@ -726,6 +728,11 @@ textarea:focus {
   #textBrands {
     font-size: 1.2rem;
     padding-bottom: 60px;
+  }
+
+  .brandIcons {
+    width: 150px;
+    height: 75px;
   }
 
   #textTouchBase {
@@ -743,7 +750,7 @@ textarea:focus {
   }
 
   .slider {
-    width: 400px;
+    width: 300px;
   }
 
   .containerContact {

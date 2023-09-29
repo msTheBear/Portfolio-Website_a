@@ -7,23 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
     <title>Michal Szymczak - Videography Portfolio</title>
+    <meta name="description" content="Videography Portfolio showcasing projects, showreel and about me information.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cantarell">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cantarell&display=swap">
     <script src="https://player.vimeo.com/api/player.js"></script>
-
-
+    <script src="http://unpkg.com/lite-vimeo-embed"></script>
 </head>
 
 <body>
 
     <!-- SPINNER LOADER START -->
 
-    <div class="preloaderWrapper">
+    <!-- <div class="preloaderWrapper">
         <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;">
             <span class="visually-hidden">Loading...</span>
         </div>
-    </div>
+    </div> -->
 
     <!-- SPINNER LOADER END -->
 
@@ -62,8 +65,8 @@
                         </div>
                         <a class="mx-auto centerAlign" href="#">
                             <figure>
-                                <img src="./images/icons/msthebear_logo.svg" role="img" id="msthebearLogoOverlay"
-                                    alt="Michal Szymczak's Logo" loading="lazy">
+                                <img src="./images/icons/msthebear_logo.svg" width="200" height="100" role="img"
+                                    id="msthebearLogoOverlay" alt="Michal Szymczak's Logo" loading="lazy">
                             </figure>
                         </a>
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
@@ -105,7 +108,6 @@
 
     <main>
 
-
         <!-- HOME START -->
 
         <section id="home">
@@ -118,8 +120,8 @@
                     </figure>
                 </div>
                 <figure>
-                    <img src="./images/background/video_background.webp" class="img-fluid backgroundVideoImg"
-                        alt="Big retro TV on a shelf background" loading="lazy">
+                    <img src="./images/background/video_background.webp" width="100%" height="100%"
+                        class="img-fluid backgroundVideoImg" alt="Big retro TV on a shelf background" loading="lazy">
                 </figure>
                 <video playsinline muted loop id="videoOnTv" poster="./images/video_thumbnails/poster.webp"
                     aria-label="Player">
@@ -169,32 +171,33 @@
                     </div>
 
                     <figure class="col-sm-12 col-xxl-6">
-                        <img src="./images/icons/bear.svg" role="img" alt="Bear" id="background_bear" loading="lazy">
+                        <img src="./images/icons/bear.svg" width="100%" height="100%" role="img" alt="Bear"
+                            id="background_bear" loading="lazy">
                     </figure>
 
                     <figure class="col-4 col-lg-2">
-                        <img src="./images/icons/software/Sony_logo.png" alt="Sony logo" class="softwareLogos"
-                            loading="lazy">
-                    </figure>
-                    <figure class="col-4 col-lg-2">
-                        <img src="./images/icons/software/BlackmagicDesign_logo.png" alt="Blackmagic Design logo"
+                        <img src="./images/icons/software/Sony_logo.png" width="150" height="100%" alt="Sony logo"
                             class="softwareLogos" loading="lazy">
                     </figure>
                     <figure class="col-4 col-lg-2">
-                        <img src="./images/icons/software/CaptureOne_logo.png" alt="Capture One logo"
-                            class="softwareLogos" loading="lazy">
+                        <img src="./images/icons/software/BlackmagicDesign_logo.png" width="150" height="100%"
+                            alt="Blackmagic Design logo" class="softwareLogos" loading="lazy">
                     </figure>
                     <figure class="col-4 col-lg-2">
-                        <img src="./images/icons/software/DaVinciResolve_logo.png" alt="DaVinci Resolve logo"
-                            class="softwareLogos" loading="lazy">
+                        <img src="./images/icons/software/CaptureOne_logo.png" width="150" height="100%"
+                            alt="Capture One logo" class="softwareLogos" loading="lazy">
                     </figure>
                     <figure class="col-4 col-lg-2">
-                        <img src="./images/icons/software/AdobePremierePro_logo.png" alt="Adobe Premiere Pro logo"
-                            class="softwareLogos" loading="lazy">
+                        <img src="./images/icons/software/DaVinciResolve_logo.png" width="150" height="100%"
+                            alt="DaVinci Resolve logo" class="softwareLogos" loading="lazy">
                     </figure>
                     <figure class="col-4 col-lg-2">
-                        <img src="./images/icons/software/AdobePhotoshop_logo.png" alt="Adobe Photoshop logo"
-                            class="softwareLogos" loading="lazy">
+                        <img src="./images/icons/software/AdobePremierePro_logo.png" width="150" height="100%"
+                            alt="Adobe Premiere Pro logo" class="softwareLogos" loading="lazy">
+                    </figure>
+                    <figure class="col-4 col-lg-2">
+                        <img src="./images/icons/software/AdobePhotoshop_logo.png" width="150" height="100%"
+                            alt="Adobe Photoshop logo" class="softwareLogos" loading="lazy">
                     </figure>
 
                 </div>
@@ -256,16 +259,17 @@
                 <div class="row g-0">
                     <figure class="col-md-4 filterDiv containerOverlay showreel" data-bs-target="#myCollapse"
                         onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/reel.webp" id="videoShowreel" class="video_thumbnails"
-                            alt="Showreel video" loading="lazy">
+                        <img src="./images/video_thumbnails/reel.webp" width="1280" height="720" id="videoShowreel"
+                            class="video_thumbnails" alt="Showreel video" loading="lazy">
                         <button class="overlay" onclick="videoShowreel()">
                             <div class="titlesContainer"><span class="titles">Showreel</span></div>
                         </button>
                     </figure>
                     <figure class="col-md-4 filterDiv containerOverlay screenWriter" data-bs-target="#myCollapse"
                         onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/thelastsupper.webp" id="videoTheLastSupper"
-                            class="video_thumbnails fade-in" alt="The Last Supper video" loading="lazy">
+                        <img src="./images/video_thumbnails/thelastsupper.webp" width="1280" height="720"
+                            id="videoTheLastSupper" class="video_thumbnails fade-in" alt="The Last Supper video"
+                            loading="lazy">
                         <button class="overlay" onclick="videoSupper()">
                             <div class="titlesContainer"><span class="titles">The Last Supper</span><br>Short Film
                             </div>
@@ -273,8 +277,9 @@
                     </figure>
                     <figure class="col-md-4 filterDiv containerOverlay videographer" data-bs-target="#myCollapse"
                         onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/wordsofseduction.webp" id="videoWordsOfSeduction"
-                            class="video_thumbnails" alt="Words of Seduction video" loading="lazy">
+                        <img src="./images/video_thumbnails/wordsofseduction.webp" width="1280" height="720"
+                            id="videoWordsOfSeduction" class="video_thumbnails" alt="Words of Seduction video"
+                            loading="lazy">
                         <button class="overlay" onclick="videoWords()">
                             <div class="titlesContainer"><span class="titles">Words Of Seduction</span><br>Short
                                 Film</div>
@@ -282,8 +287,8 @@
                     </figure>
                     <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
                         data-bs-target="#myCollapse" onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/forks.webp" id="videoForks" class="video_thumbnails"
-                            alt="Forks & Green video" loading="lazy">
+                        <img src="./images/video_thumbnails/forks.webp" width="1280" height="720" id="videoForks"
+                            class="video_thumbnails" alt="Forks & Green video" loading="lazy">
                         <button class="overlay" onclick="videoForks()">
                             <div class="titlesContainer"><span class="titles">Forks & Green</span><br>Promo Video
                             </div>
@@ -291,8 +296,8 @@
                     </figure>
                     <figure class="col-md-4 filterDiv containerOverlay cameraOperator" data-bs-target="#myCollapse"
                         onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/alim.webp" id="videoAlim" class="video_thumbnails"
-                            alt="Alim 'Bounce' video" loading="lazy">
+                        <img src="./images/video_thumbnails/alim.webp" width="1280" height="720" id="videoAlim"
+                            class="video_thumbnails" alt="Alim 'Bounce' video" loading="lazy">
                         <button class="overlay" onclick="videoAlim()">
                             <div class="titlesContainer"><span class="titles">Alim "Bounce"</span><br>Music Video
                             </div>
@@ -300,8 +305,8 @@
                     </figure>
                     <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
                         data-bs-target="#myCollapse" onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/traintogenzo.webp" id="videoTrainToGenzo"
-                            class="video_thumbnails" alt="Train to Genzo video" loading="lazy">
+                        <img src="./images/video_thumbnails/traintogenzo.webp" width="1280" height="720"
+                            id="videoTrainToGenzo" class="video_thumbnails" alt="Train to Genzo video" loading="lazy">
                         <button class="overlay" onclick="videoTrain()">
                             <div class="titlesContainer"><span class="titles">Train To Genzo</span><br>Behind The
                                 Scenes</div>
@@ -309,16 +314,16 @@
                     </figure>
                     <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
                         data-bs-target="#myCollapse" onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/Brios.webp" id="videoBrios" class="video_thumbnails"
-                            alt="Brios video" loading="lazy">
+                        <img src="./images/video_thumbnails/Brios.webp" width="1280" height="720" id="videoBrios"
+                            class="video_thumbnails" alt="Brios video" loading="lazy">
                         <button class="overlay" onclick="videoBrios()">
                             <div class="titlesContainer"><span class="titles">Brios</span><br>Promo Video</div>
                         </button>
                     </figure>
                     <figure class="col-md-4 filterDiv containerOverlay videoEditor" data-bs-target="#myCollapse"
                         onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/thebanc.webp" id="videoTheBanc" class="video_thumbnails"
-                            alt="The Banc video" loading="lazy">
+                        <img src="./images/video_thumbnails/thebanc.webp" width="1280" height="720" id="videoTheBanc"
+                            class="video_thumbnails" alt="The Banc video" loading="lazy">
                         <button class="overlay" onclick="videoTheBanc()">
                             <div class="titlesContainer"><span class="titles">The Banc Highlights</span><br>Promo
                                 Video</div>
@@ -326,8 +331,8 @@
                     </figure>
                     <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
                         data-bs-target="#myCollapse" onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/pride.webp" id="videoPride" class="video_thumbnails"
-                            alt="Pride in London video" loading="lazy">
+                        <img src="./images/video_thumbnails/pride.webp" width="1280" height="720" id="videoPride"
+                            class="video_thumbnails" alt="Pride in London video" loading="lazy">
                         <button class="overlay" onclick="videoPride()">
                             <div class="titlesContainer"><span class="titles">Pride In London</span><br>Promo Video
                             </div>
@@ -335,8 +340,8 @@
                     </figure>
                     <figure class="col-md-4 filterDiv containerOverlay videographer videoEditor colorist"
                         data-bs-target="#myCollapse" onclick="showCollapse()">
-                        <img src="./images/video_thumbnails/mrmrs.webp" id="videoMrMrs" class="video_thumbnails"
-                            alt="Mr & Mrs Johnson video" loading="lazy">
+                        <img src="./images/video_thumbnails/mrmrs.webp" width="1280" height="720" id="videoMrMrs"
+                            class="video_thumbnails" alt="Mr & Mrs Johnson video" loading="lazy">
                         <button class="overlay" onclick="videoMrMrs()">
                             <div class="titlesContainer"><span class="titles">Mr & Mrs Johnson</span><br>Wedding
                                 Video</div>
@@ -359,64 +364,64 @@
                     <div class="slider">
                         <div class="slide-track">
                             <figure class="slide">
-                                <img src="./images/icons/brands/ADP_logo.svg" role="img" alt="ADP logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/ADP_logo.svg" width="200" height="100" role="img"
+                                    alt="ADP logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/Ascend_logo.svg" role="img" alt="Ascend logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/Ascend_logo.svg" width="200" height="100" role="img"
+                                    alt="Ascend logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/CedarsSinai_logo.svg" role="img" alt="Cedars Sinai logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/CedarsSinai_logo.svg" width="200" height="100"
+                                    role="img" alt="Cedars Sinai logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/Disneyland_logo.svg" role="img" alt="Disneyland logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/Disneyland_logo.svg" width="200" height="100" role="img"
+                                    alt="Disneyland logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/Encore_logo.png" role="img" alt="Encore logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/Encore_logo.png" width="200" height="100" role="img"
+                                    alt="Encore logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/Hilton_logo.svg" role="img" alt="Hilton logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/Hilton_logo.svg" width="200" height="100" role="img"
+                                    alt="Hilton logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/Hyatt-Regency_logo.svg" role="img"
-                                    alt="Hyatt Regency logo" loading="lazy" />
+                                <img src="./images/icons/brands/Hyatt-Regency_logo.svg" width="200" height="100"
+                                    role="img" alt="Hyatt Regency logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/Marriott_logo.svg" role="img" alt="Marriot logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/Marriott_logo.svg" width="200" height="100" role="img"
+                                    alt="Marriot logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/SaturnAwards_logo.svg" role="img"
-                                    alt="Saturns Awards logo" loading="lazy" />
+                                <img src="./images/icons/brands/SaturnAwards_logo.svg" width="200" height="100"
+                                    role="img" alt="Saturns Awards logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/Sheraton_logo.svg" role="img" alt="Sheraton logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/Sheraton_logo.svg" width="200" height="100" role="img"
+                                    alt="Sheraton logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/TerraneaResort_logo.svg" role="img"
-                                    alt="Terranea Resort logo" loading="lazy" />
+                                <img src="./images/icons/brands/TerraneaResort_logo.svg" width="200" height="100"
+                                    role="img" alt="Terranea Resort logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/ADP_logo.svg" role="img" alt="ADP logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/ADP_logo.svg" width="200" height="100" role="img"
+                                    alt="ADP logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/Ascend_logo.svg" role="img" alt="Ascend logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/Ascend_logo.svg" width="200" height="100" role="img"
+                                    alt="Ascend logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/CedarsSinai_logo.svg" role="img" alt="Cedars Sinai logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/CedarsSinai_logo.svg" width="200" height="100"
+                                    role="img" alt="Cedars Sinai logo" class="brandIcons" loading="lazy" />
                             </figure>
                             <figure class="slide">
-                                <img src="./images/icons/brands/Disneyland_logo.svg" role="img" alt="Disneyland logo"
-                                    loading="lazy" />
+                                <img src="./images/icons/brands/Disneyland_logo.svg" width="200" height="100" role="img"
+                                    alt="Disneyland logo" class="brandIcons" loading="lazy" />
                             </figure>
                         </div>
                     </div>
@@ -439,32 +444,32 @@
                             <li>
                                 <figure>
                                     <a href="https://www.instagram.com/msthebear/" target="_blank">
-                                        <img src="./images/icons/social media/Instagram_logo.svg" role="img"
-                                            alt="Instagram logo" class="socialIcon" loading="lazy">
+                                        <img src="./images/icons/social media/Instagram_logo.svg" width="40" height="40"
+                                            role="img" alt="Instagram logo" class="socialIcon" loading="lazy">
                                     </a>
                                 </figure>
                             </li>
                             <li>
                                 <figure>
                                     <a href="https://vimeo.com/michalthebear" target="_blank">
-                                        <img src="./images/icons/social media/vimeo_logo.svg" role="img"
-                                            alt="Vimeo logo" class="socialIcon" loading="lazy">
+                                        <img src="./images/icons/social media/vimeo_logo.svg" width="40" height="40"
+                                            role="img" alt="Vimeo logo" class="socialIcon" loading="lazy">
                                     </a>
                                 </figure>
                             </li>
                             <li>
                                 <figure>
                                     <a href="https://www.linkedin.com/in/michalthebear/" target="_blank">
-                                        <img src="./images/icons/social media/linkedIn_logo.svg" role="img"
-                                            alt="LinkedId logo" class="socialIcon" loading="lazy">
+                                        <img src="./images/icons/social media/linkedIn_logo.svg" width="40" height="40"
+                                            role="img" alt="LinkedId logo" class="socialIcon" loading="lazy">
                                     </a>
                                 </figure>
                             </li>
                             <li>
                                 <figure>
                                     <a href="https://www.imdb.com/name/nm11515436/" target="_blank">
-                                        <img src="./images/icons/social media/imdb_logo.svg" role="img" alt="IMDB logo"
-                                            class="socialIcon" loading="lazy">
+                                        <img src="./images/icons/social media/imdb_logo.svg" width="40" height="40"
+                                            role="img" alt="IMDB logo" class="socialIcon" loading="lazy">
                                     </a>
                                 </figure>
                             </li>
@@ -508,7 +513,6 @@
         </section>
 
         <!-- CONTACT ME SECTION END -->
-
 
     </main>
 
